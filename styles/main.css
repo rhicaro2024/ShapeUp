@@ -34,6 +34,7 @@ header {
 header img {
     float:left;
     margin-right:15px;
+    padding: 10px 1.5em;
 }
 /* Horizontal inline navigation menu */
 /* #nav_menu {
@@ -208,4 +209,46 @@ footer p{
     font-weight: bold;
     text-align: center;
     font-variant: small-caps;
+}
+
+/* hid mobile menu */
+#mobilemenu {
+    display: none;
+}
+
+/* media queries */
+@media only screen and (max-width: 900px) {
+    body {
+        box-shadow: none;
+        font-size: 90%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    #nav_menu {
+        display: none;
+    }
+    #mobilemenu {
+        display: block;
+    }
+    .slicknav_menu {
+        background-color: steelblue !important;
+    }
+    header h2 {
+        font-size: 200%;
+    }
+    section, aside {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        padding: .5em;
+    }
+    header img {
+        float: none;
+        padding: .5em;
+        display: block;
+        margin: 0 auto;
+    }
+    header h2, header h3{
+        text-align: center;
+    }
 }
