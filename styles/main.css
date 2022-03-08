@@ -11,6 +11,7 @@
 html{
     background-color: lightsteelblue;
     background-image: url("../images/bgtile.jpg");
+    background-attachment: fixed;
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -103,6 +104,7 @@ header img {
     position: absolute;
     top: 100%;
     background-color: steelblue;
+    box-shadow: 7px 7px 15px -1px gray;
 }
 .container ul li {
     flex-direction: column;
@@ -117,6 +119,10 @@ header img {
 main{
     padding: 0 1em;
 }
+.underconstruction {
+    display: block;
+    margin: auto;
+}
 main h1 {
     text-align: center;
     font-size: 300%;
@@ -125,6 +131,9 @@ main h1 {
     font-variant: small-caps;
     text-shadow: 1px 1px 2px black, -1px -1px 2px black,1px  -1px 2px black, -1px 1px 2px black;
 }
+main h2 {
+    text-align: center;
+}
 aside{
     width: 30%;
     float: left;
@@ -132,6 +141,15 @@ aside{
 }
 #asideleft {
     float: left;
+}
+article img {
+    display: flex;
+    flex-direction: column;
+}
+article > img {
+    margin: 1em 2em;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px 3px darkslategray;
 }
 
 aside h2{
@@ -168,6 +186,21 @@ section {
     float: left;
     padding-top: 10px;
     padding-right: 5px;
+}
+.icon {
+    float: left;
+    margin-right: 0.5em;
+    margin-left: 5em;
+    max-width: 25px;
+}
+section h3::after {
+    clear: left;
+}
+section p {
+    margin: 0 2em 2em 1.5em;
+}
+section h3 {
+    margin-bottom: 5px;
 }
 #asideright {
     float: right;
@@ -234,9 +267,13 @@ footer p{
 
 /* media queries */
 @media only screen and (max-width: 900px) {
+    html {
+        background-image: none;
+    }
     body {
         box-shadow: none;
         font-size: 90%;
+        border: none;
     }
     #asideleft {
         display: none;
